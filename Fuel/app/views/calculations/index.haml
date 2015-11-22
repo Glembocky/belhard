@@ -1,0 +1,10 @@
+= form_for @calculation, as: :calculation,  url: show_path(@calculation) do |f|
+  .p
+    = f.select :region, options_for_select([['European', '0'], ['US', '1']])
+  .p
+    = f.text_field :fuel
+  .p
+    = f.text_field :distance
+
+  .p
+    = f.submit 'Calculat'
